@@ -39,7 +39,7 @@ int main(int argc, char **argv){
     /*
        argv[0] = name of the program
        argv[1] = number of threads to be created
-       argv[2] = name of the file to be generated, must include the ".bin" extension
+       argv[2] = name of the file to read from, must include the ".bin" extension
     */
 
     double inputResult, result = 0.0;
@@ -154,12 +154,13 @@ int main(int argc, char **argv){
         free(dotReturnThreads);
      }
 
-    printf("\nDot Product Read: %.6f\n", inputResult);
-    printf("Dot Product Computed Concurrently: %.6f\n", result);
+    printf("Size of the vectors: %d", n);
+    printf("\nDot Product Read: %.10f\n", inputResult);
+    printf("Dot Product Computed Concurrently: %.10f\n", result);
     
     double relative_error = fabs((inputResult - result) / inputResult);
 
-    printf("Relative Error: %.6f\n", relative_error);
+    printf("Relative Error: %f\n", relative_error);
 
     // free resources
     free(vec1);

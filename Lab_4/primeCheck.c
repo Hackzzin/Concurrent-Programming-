@@ -29,14 +29,19 @@ int is_prime(long long int n) {
 
 void* chore(void* args){
     t_Args *arg = (t_Args *) args;
-
-    for (int i = arg->id; i <= nElements; i += arg->nthreads){
-        if (is_prime(i)){
-            pthread_mutex_lock(&mutex); 
-            count++; 
-            pthread_mutex_unlock(&mutex); 
+    int local_count = 0;
+    long long int start = (nElements * arg->id) / arg->nthreads;
+    long long int end = (nElements * (arg->id + 1)) / arg->nthreads;
+    
+    for (long long int i = start; i < end; i++) {
+        if (is_prime(i)) {
+            local_count++;
         }
     }
+
+    pthread_mutex_lock(&mutex); 
+    count += local_count; 
+    pthread_mutex_unlock(&mutex); 
 
     pthread_exit(NULL); // exit the thread
 }
@@ -109,7 +114,7 @@ int main(int argc, char **argv){
 
     elapsed_time = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
     printf("Total prime numbers: %d\n", count);
-    printf("Execution time: %.6f miliseconds\n", 1000 * elapsed_time);
+    printf("Execution time: %.6f seconds\n", elapsed_time);
 
     fp = fopen("results.txt", "a");
     if (fp == NULL) {
@@ -118,7 +123,7 @@ int main(int argc, char **argv){
     }
 
     fprintf(fp, "Total prime numbers: %d, %d threads\n", count, nThreads);
-    fprintf(fp, "Execution time: %.6f miliseconds\n", 1000 * elapsed_time);
+    fprintf(fp, "Execution time: %.6f seconds\n", elapsed_time);
 
     fclose(fp);
 

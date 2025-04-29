@@ -1,0 +1,34 @@
+Total prime numbers: 78498, 1 threads
+Execution time: 88.763812 miliseconds
+Total prime numbers: 78498, 1 threads
+Execution time: 90.397303 miliseconds
+Total prime numbers: 78498, 1 threads
+Execution time: 90.579474 miliseconds
+Total prime numbers: 78498, 1 threads
+Execution time: 92.808936 miliseconds
+Total prime numbers: 78498, 1 threads
+Execution time: 89.829781 miliseconds
+
+
+Total prime numbers: 78498, 2 threads
+Execution time: 90.463763 miliseconds
+Total prime numbers: 78498, 2 threads
+Execution time: 89.600895 miliseconds
+Total prime numbers: 78498, 2 threads
+Execution time: 90.285107 miliseconds
+Total prime numbers: 78498, 2 threads
+Execution time: 89.621312 miliseconds
+Total prime numbers: 78498, 2 threads
+Execution time: 102.710733 miliseconds
+
+
+Total prime numbers: 78498, 4 threads
+Execution time: 50.767820 miliseconds
+Total prime numbers: 78498, 4 threads
+Execution time: 52.465402 miliseconds
+Total prime numbers: 78498, 4 threads
+Execution time: 68.085333 miliseconds
+Total prime numbers: 78498, 4 threads
+Execution time: 54.031055 miliseconds
+Total prime numbers: 78498, 4 threads
+Execution time: 50.006216 miliseconds

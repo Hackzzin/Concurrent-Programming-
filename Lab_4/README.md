@@ -16,36 +16,10 @@ Exemplo de execução:
 `./prime 1000000 2`
 
 ### Resultado
-Para 1.000.000 de elementos na sequência, foram rodado 5 vezes o programa para os seguintes valores de threads: 1 (sequencial/base), 2 e 4. Os resultados obtidos estão no arquivo .txt.
+Para 10.000.000 de elementos na sequência, foram rodado 5 vezes o programa para os seguintes valores de threads: 1 (sequencial/base), 2 e 4. Os resultados obtidos estão no arquivo .txt.
 
-Aceleração(n, t) = Ts(n) / Tp(n, t)
-
-Eficiência(n, t) = A(n, t)/t
-
-Para 1 thread:
-Ts = 90,4758612 ms
-
-Tp = 90,4758612 ms
-
-Aceleração = 1
-
-Eficiência = 1
-
-Para 2 threads:
-Ts = 90,4758612 ms
-
-Tp = 92,536362 ms
-
-Aceleração = 0,9777330688664852
-
-Eficiência = 0,4888665344332426
-
-Para 4 threads:
-Ts = 90,4758612 ms
-
-Tp = 55,071165 ms
-
-Aceleração = 1,642889907994501
-
-Eficiência = 0,4107224769986253
-
+| Threads | Avg. Time (s) | Speedup (vs. 1 thread) | Efficiency (%) |
+|---------|---------------|------------------------|----------------|
+| 1       | 2.188552      | 1.00×                  | 100.00%        |
+| 2       | 1.449690      | 1.51×                  | 75.75%         |
+| 4       | 0.909185      | 2.41×                  | 60.14%         |

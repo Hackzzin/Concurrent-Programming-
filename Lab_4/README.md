@@ -19,23 +19,33 @@ Exemplo de execução:
 Para 1.000.000 de elementos na sequência, foram rodado 5 vezes o programa para os seguintes valores de threads: 1 (sequencial/base), 2 e 4. Os resultados obtidos estão no arquivo .txt.
 
 Aceleração(n, t) = Ts(n) / Tp(n, t)
+
 Eficiência(n, t) = A(n, t)/t
 
 Para 1 thread:
 Ts = 90,4758612 ms
+
 Tp = 90,4758612 ms
+
 Aceleração = 1
+
 Eficiência = 1
 
 Para 2 threads:
 Ts = 90,4758612 ms
+
 Tp = 92,536362 ms
+
 Aceleração = 0,9777330688664852
+
 Eficiência = 0,4888665344332426
 
 Para 4 threads:
 Ts = 90,4758612 ms
+
 Tp = 55,071165 ms
+
 Aceleração = 1,642889907994501
+
 Eficiência = 0,4107224769986253
 

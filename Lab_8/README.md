@@ -6,6 +6,7 @@ Projetar, implementar e avaliar a implementação de um problema de contagem de 
 ### Explicação sobre o que cada arquivo faz
 
 `primeCocProd.c` -> este arquivo será responsável por criar receber pela linha de comando o maior número da sequência de números a serem checadas,  o número de threads consumidoras e o tamanho do buffer em que as threads irão manusear. O resultado é colocado no arquivo "results.txt". 
+
 `results.txt` -> este arquivo será responsável por conter os tempos de execução de cada tentativa, o número de primos vistos na sequências, a thread consumidora que mais achou primos, o tamanho do buffer e o número total de threads consumidoras.
 `primeCocProd.c`
 <pre> gcc -o nome_executavel primeCocDot.c -lpthread -lm 

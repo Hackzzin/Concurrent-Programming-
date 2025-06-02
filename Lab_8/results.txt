@@ -1,0 +1,18 @@
+Para nElements = 100.000:
+Threads: 1 | Primes: 9592 | Time: 0.0651 s | Buffer: 20 | Winner: 0
+Threads: 2 | Primes: 9592 | Time: 0.2635 s | Buffer: 20 | Winner: 0
+Threads: 3 | Primes: 9592 | Time: 0.9970 s | Buffer: 20 | Winner: 2
+Threads: 4 | Primes: 9592 | Time: 1.0679 s | Buffer: 20 | Winner: 3
+Threads: 5 | Primes: 9592 | Time: 1.1465 s | Buffer: 20 | Winner: 4
+Threads: 6 | Primes: 9592 | Time: 1.2431 s | Buffer: 20 | Winner: 5
+Threads: 6 | Primes: 9592 | Time: 1.1202 s | Buffer: 100 | Winner: 0
+Threads: 6 | Primes: 9592 | Time: 1.1133 s | Buffer: 1000 | Winner: 1
+Threads: 8 | Primes: 9592 | Time: 1.1494 s | Buffer: 1000 | Winner: 4
+
+Para nElements = 10.000.000:
+Threads: 1 | Primes: 664579 | Time: 9.4838 s | Buffer: 100 | Winner: 0
+Threads: 2 | Primes: 664579 | Time: 8.8657 s | Buffer: 100 | Winner: 0
+Threads: 3 | Primes: 664579 | Time: 45.5533 s | Buffer: 100 | Winner: 2
+Threads: 3 | Primes: 664579 | Time: 11.0933 s | Buffer: 1000 | Winner: 1
+Threads: 4 | Primes: 664579 | Time: 35.5202 s | Buffer: 1000 | Winner: 3
+Threads: 4 | Primes: 664579 | Time: 26.9024 s | Buffer: 10000 | Winner: 1

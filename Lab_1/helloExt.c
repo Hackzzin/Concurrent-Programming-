@@ -5,9 +5,16 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+typedef struct {
+    int id;
+    int nthreads;
+} t_Args;
+
 void *hello_thread(void* arg){
-    long int id = (long  int) arg;
-    printf("Hello World - Thread %ld\n", id);
+    t_Args *args = (t_Args *) arg;
+    long int id = args->id;
+    int nthreads = args->nthreads;
+    printf("Hello World - Thread %ld\n nthread: %d\n", id, nthreads);
     pthread_exit(NULL); //funcao de termino da thread, para retorno de valores
 }
 
@@ -33,7 +40,20 @@ int main (int argc, char** argv){
 
     // create the threads
     for(int i = 0; i < nthreads; i++){
-        pthread_create (&tid[i], NULL, hello_thread, (void *)i);
+        t_Args *args = (t_Args *) malloc(sizeof(t_Args));
+        if (args == NULL){
+            printf("Memory allocation ERROR");
+            return 2;
+        }
+
+        args->id = i;
+        args->nthreads = nthreads;
+        int ret = pthread_create (&tid[i], NULL, hello_thread, (void *)args);
+
+        if (ret){
+            printf("Thread <%d> creation ERROR: %d\n", i, ret);
+            return 3;
+        }
     }
 
 
